@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.DesignDemo" parent="Base.Theme.DesignDemo">
+    </style>
+
+    <style name="Base.Theme.DesignDemo" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#3399cc</item>
+        <item name="colorPrimaryDark">#2578A1</item>
+        <item name="colorAccent">#FF4081</item>
+        <item name="android:windowBackground">@color/window_background</item>
+    </style>
+
+    <style name="Widget.CardContent" parent="android:Widget">
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">24dp</item>
+        <item name="android:paddingBottom">24dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+
+    <style name="textView_sp12_green">
+        <item name="android:textColor">@color/material_green</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="textView_sp12_white">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="textView_calendar_common_day_normal">
+        <item name="android:textColor">@drawable/tl_textview_primary_text_white_selector</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="textView_sp12_grey_bright">
+        <item name="android:textColor">@color/text_grey_bright</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="textView_calendar_common_today">
+        <item name="android:textColor">@drawable/tl_textview_accent_white_selector</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="textView_sp13_primary_text_bold">
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="textView_title">
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="textView_sp13_grey_bg_bold">
+        <item name="android:textColor">@color/text_grey_bg</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="textView_12_grey_light">
+        <item name="android:textColor">@color/text_grey_light</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+</resources>

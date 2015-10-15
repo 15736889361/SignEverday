@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="230dp"
+    android:id="@+id/bbc"
+    android:background="?attr/colorPrimary"/>
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        >
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:collapsedTitleTextAppearance="@style/textView_sp12_white"
+            app:expandedTitleTextAppearance="@style/textView_sp12_white"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="84dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+               />  <!--pin 和上面组合互动-->
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bbc"
+        android:scrollbars="none"
+        >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"    android:onClick="checkin">
+        <TextView
+            android:layout_height="wrap_content"  android:layout_gravity="left|center"
+            android:layout_marginLeft="20dp"
+            android:textColor="#000000"  android:text="Step1： 获得我的位置"
+            android:textSize="16sp"  android:gravity="center"
+            android:layout_width="wrap_content" android:id="@+id/tvb1"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+        <TextView
+            android:layout_height="wrap_content"  android:layout_gravity="left|center"
+            android:layout_marginLeft="20dp" android:layout_below="@+id/tvb1"
+            android:textColor="#000000"  android:text=""
+            android:textSize="12sp"  android:gravity="center"
+            android:layout_width="wrap_content" android:id="@+id/youadr"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+        <android.support.design.widget.FloatingActionButton
+            android:onClick="checkin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            app:fabSize="mini"
+            app:elevation="0dp"
+            android:id="@+id/fab1"
+            app:backgroundTint="#DBD6D6"
+            android:src="@drawable/gogogo"
+            android:layout_gravity="right"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="43dp" />
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp" android:visibility="invisible"
+            app:fabSize="mini"
+            android:id="@+id/fab11"
+            app:elevation="0dp"
+            android:src="@drawable/ok"
+            android:layout_gravity="right"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="43dp" />
+<TextView
+    android:layout_width="match_parent" android:background="#000000"
+    android:layout_height="1dp" android:layout_below="@+id/youadr" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"  android:layout_marginTop="20dp"
+        android:layout_height="70dp"    android:onClick="checkin2">
+        <TextView
+            android:layout_height="wrap_content"  android:layout_gravity="left|center"
+            android:layout_marginLeft="20dp"
+            android:textColor="#000000"  android:text="Step2： 来一张我的自拍"
+            android:textSize="16sp"  android:gravity="center"
+            android:layout_width="wrap_content" android:id="@+id/tvb2"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+        <TextView
+            android:layout_height="wrap_content"  android:layout_gravity="left|center"
+            android:layout_marginLeft="20dp" android:layout_below="@+id/tvb2"
+            android:textColor="#000000"  android:text=""
+            android:textSize="12sp"  android:gravity="center"
+            android:layout_width="wrap_content" android:id="@+id/youpic"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+        <android.support.design.widget.FloatingActionButton
+            android:onClick="checkin2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="mini"
+            android:layout_marginRight="20dp"
+            android:id="@+id/fab2"
+            app:elevation="0dp"
+            app:backgroundTint="#DBD6D6"
+            android:src="@drawable/gogogo"
+            android:layout_gravity="right"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="43dp" />
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="mini"
+            android:layout_marginRight="20dp" android:visibility="invisible"
+            android:id="@+id/fab22"
+            app:elevation="0dp"
+            android:src="@drawable/ok"
+            android:layout_gravity="right"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="43dp" />
+        <TextView
+            android:layout_width="match_parent" android:background="#000000"
+            android:layout_height="1dp" android:layout_below="@+id/youpic" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"  android:layout_marginTop="20dp"
+        android:layout_height="70dp"  android:layout_marginBottom="20dp"
+        android:onClick="checkin3"
+        >
+
+        <TextView
+            android:layout_height="wrap_content"  android:layout_gravity="left|center"
+            android:layout_marginLeft="20dp"
+            android:textColor="#000000"  android:text="Step3： 写点心情（可选）"
+            android:textSize="16sp"  android:gravity="center"
+            android:layout_width="wrap_content" android:id="@+id/tvb3"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+        <TextView
+            android:layout_height="wrap_content"  android:layout_gravity="left|center"
+            android:layout_marginLeft="20dp" android:layout_below="@+id/tvb3"
+            android:textColor="#000000"  android:text=""
+            android:textSize="12sp"  android:gravity="center"
+            android:layout_width="wrap_content" android:id="@+id/youtip"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+        <android.support.design.widget.FloatingActionButton
+            android:onClick="checkin3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundTint="#DBD6D6"
+            app:fabSize="mini"
+            app:elevation="0dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/fab3"
+            android:src="@drawable/gogogo"
+            android:layout_gravity="right"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="43dp" />
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="mini"
+            app:elevation="0dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/fab33" android:visibility="invisible"
+            android:src="@drawable/ok"
+            android:layout_gravity="right"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="43dp" />
+        <TextView
+            android:layout_width="match_parent" android:background="#000000"
+            android:layout_height="1dp" android:layout_below="@+id/youtip" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"  android:layout_marginTop="20dp"
+        android:layout_height="50dp" android:layout_weight="1">
+        <TextView
+            android:layout_height="50dp"  android:layout_gravity="left|center"
+            android:layout_marginLeft="20dp" android:layout_marginRight="20dp"
+            android:textColor="#FFFFFF"  android:text="提交"
+            android:textSize="16sp"  android:gravity="center"
+            android:layout_width="match_parent" android:background="@color/material_green"
+            android:layout_centerVertical="true" android:id="@+id/tosign"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+    </ScrollView>
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/imageView2" android:background="@drawable/earth"
+        android:layout_below="@+id/appbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp" />
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 非触摸模式下获得焦点并单击时的背景图片 -->
+    <item android:drawable="@drawable/tl_view_oval_accent_bg" android:state_pressed="true"/>
+    <!-- 选中时的图片背景 -->
+    <item android:drawable="@drawable/tl_view_oval_accent_bg" android:state_selected="true"/>
+    <!-- 可以点击 -->
+    <item android:drawable="@color/transparent" android:state_enabled="true"/>
+    <!-- 不可点击 -->
+    <item android:drawable="@color/transparent" android:state_enabled="false"/>
+    <!-- 默认时的背景图片 -->
+    <item android:drawable="@color/transparent"/>
+
+</selector>

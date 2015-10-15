@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 日历样式属性 -->
+    <declare-styleable name="TlCalendar">
+
+        <!-- 星期的文字 -->
+        <attr name="weekTextStyle" format="reference" />
+        <attr name="dayTextStyle" format="reference" />
+        <attr name="todayTextStyle" format="reference" />
+        <attr name="notCurrentTextStyle" format="reference" />
+        <!-- 日期选择的背景 -->
+        <attr name="daySelector" format="reference" />
+    </declare-styleable>
+
+</resources>

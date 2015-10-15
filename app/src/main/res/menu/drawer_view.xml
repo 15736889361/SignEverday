@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_dashboard"
+            android:title="首页"/>
+        <item
+            android:id="@+id/nav_messages"
+            android:icon="@drawable/ic_event"
+            android:title="我要签到"/>
+        <item
+            android:id="@+id/nav_friends"
+            android:icon="@drawable/ic_headset"
+            android:title="签到历史"/>
+   <!--     <item
+            android:id="@+id/nav_discussion"
+            android:icon="@drawable/ic_forum"
+            android:title=""/>-->
+    </group>
+
+    <item android:title="Version">
+        <menu>
+            <item
+                android:icon="@drawable/ic_dashboard"
+                android:title="清除缓存"/>
+            <item
+                android:id="@+id/about"
+                android:icon="@drawable/ic_dashboard"
+                android:title="关于我们"/>
+        </menu>
+    </item>
+
+</menu>
