@@ -10,6 +10,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +27,7 @@ import java.util.Date;
 
 public class DetailActivity extends AppCompatActivity {
     public Button b1;
+    DatePicker dp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +39,7 @@ public class DetailActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("日期查询");
 //初始化DatePicker
-        DatePicker dp= (DatePicker) findViewById(R.id.datePicker);
+        dp= (DatePicker) findViewById(R.id.datePicker);
         Date dt=new Date();
 
         CollapsingToolbarLayout collapsingToolbar =
@@ -108,11 +110,23 @@ public class DetailActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case android.R.id.home:
                finish();
-                return true;
+                break;
+            case R.id.action_datepicker:
+                if(dp.getVisibility()!=View.VISIBLE)
+                    dp.setVisibility(View.VISIBLE);
+                else
+                    dp.setVisibility(View.INVISIBLE);
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
-//使用静态内部类，避免引用父类
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_date, menu);
+        return true;
+    }
+
+    //使用静态内部类，避免引用父类
     static class mViewHolder extends RecyclerView.ViewHolder{
         ImageView row_iv;
         TextView row_title;

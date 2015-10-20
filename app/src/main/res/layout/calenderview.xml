@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 <TextView
     android:layout_width="match_parent"
-    android:layout_height="200dp"
+    android:layout_height="wrap_content"
     android:id="@+id/bbc"
     android:background="?attr/colorPrimary"/>
     <android.support.design.widget.AppBarLayout
@@ -32,22 +32,12 @@
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-               />  <!--pin 和上面组合互动-->
+               >
+            </android.support.v7.widget.Toolbar> <!--pin 和上面组合互动-->
         </android.support.design.widget.CollapsingToolbarLayout>
 
     </android.support.design.widget.AppBarLayout>
-    <DatePicker
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/datePicker"
 
-        android:spinnersShown="true"
-
-        android:layout_alignParentTop="true"
-        android:calendarViewShown="false"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:theme="@style/textView_sp12_white" />
 
 
     <!-- <com.hujiang.designsupportlibrarydemo.calendar.CommonCalendarView
@@ -60,14 +50,24 @@
          android:layout_centerHorizontal="true" />-->
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view"
-        android:layout_width="wrap_content"
-        android:layout_below="@id/bbc"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/appbar"
         android:layout_height="match_parent"
      />
 
-   <!-- <Button
-        android:layout_width="match_parent"
+    <DatePicker
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="true"
-        android:id="@+id/button1"/>-->
+        android:id="@+id/datePicker"
+        android:spinnersShown="true"
+
+        android:calendarViewShown="false"
+        android:theme="@style/textView_sp12_white"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+    <!-- <Button
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignBottom="true"
+         android:id="@+id/button1"/>-->
 </RelativeLayout>
